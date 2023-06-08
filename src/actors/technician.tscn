@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://ccadhe2jdx4ci"]
+
+[ext_resource type="Script" path="res://scripts/unit.gd" id="1_kdlgl"]
+[ext_resource type="Texture2D" uid="uid://clx7oa2kkgiy2" path="res://assets/icon.svg" id="1_p40pk"]
+
+[sub_resource type="Animation" id="Animation_0phov"]
+resource_name = "idle"
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_g3g1w"]
+resource_name = "selected"
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D/sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1.5, 1.5, 1.5, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_60fn3"]
+_data = {
+"idle": SubResource("Animation_0phov"),
+"selected": SubResource("Animation_g3g1w")
+}
+
+[node name="technician" type="Path2D"]
+script = ExtResource("1_kdlgl")
+skin = ExtResource("1_p40pk")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+rotates = false
+loop = false
+
+[node name="sprite" type="Sprite2D" parent="PathFollow2D"]
+texture = ExtResource("1_p40pk")
+
+[node name="shadow" type="Sprite2D" parent="PathFollow2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_60fn3")
+}
