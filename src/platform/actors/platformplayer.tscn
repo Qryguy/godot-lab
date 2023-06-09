@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2qfw20ov3wot"]
+
+[ext_resource type="Script" path="res://platform/actors/platformplayer.gd" id="1_jtu3b"]
+[ext_resource type="Texture2D" uid="uid://clx7oa2kkgiy2" path="res://trpg/assets/icon.svg" id="2_mo34r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ahrs"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_jtu3b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.76837e-07, -1.43051e-06)
+scale = Vector2(0.175694, 0.164239)
+texture = ExtResource("2_mo34r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3ahrs")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.4, 1.4)

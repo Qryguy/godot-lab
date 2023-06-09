@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://ccadhe2jdx4ci"]
 
-[ext_resource type="Script" path="res://scripts/unit.gd" id="1_kdlgl"]
-[ext_resource type="Texture2D" uid="uid://clx7oa2kkgiy2" path="res://assets/icon.svg" id="1_p40pk"]
+[ext_resource type="Script" path="res://trpg/scripts/unit.gd" id="1_2sr8c"]
+[ext_resource type="Texture2D" uid="uid://clx7oa2kkgiy2" path="res://trpg/assets/icon.svg" id="2_d708k"]
 
 [sub_resource type="Animation" id="Animation_0phov"]
 resource_name = "idle"
@@ -31,15 +31,15 @@ _data = {
 }
 
 [node name="technician" type="Path2D"]
-script = ExtResource("1_kdlgl")
-skin = ExtResource("1_p40pk")
+script = ExtResource("1_2sr8c")
+skin = ExtResource("2_d708k")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
 rotates = false
 loop = false
 
 [node name="sprite" type="Sprite2D" parent="PathFollow2D"]
-texture = ExtResource("1_p40pk")
+texture = ExtResource("2_d708k")
 
 [node name="shadow" type="Sprite2D" parent="PathFollow2D"]
 

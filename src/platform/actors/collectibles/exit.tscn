@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0rvnu3t20603"]
+
+[ext_resource type="Script" path="res://platform/scripts/nextlevel.gd" id="1_46asm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_24wq7"]
+
+[node name="Exit" type="Area2D"]
+script = ExtResource("1_46asm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_24wq7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

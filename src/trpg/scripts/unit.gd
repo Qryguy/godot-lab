@@ -12,7 +12,7 @@ extends Path2D
 signal walk_finished
 
 # Preload the `Grid.tres` resource you created in the previous part.
-@export var grid: Resource = preload("res://resources/grid.tres")
+@export var grid: Resource = preload("res://trpg/resources/grid.tres")
 # Distance to which the unit can walk in cells.
 # We'll use this to limit the cells the unit can move to.
 @export var move_range := 6

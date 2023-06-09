@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u7urmuabpjjn"
-path="res://.godot/imported/Tilemap.png-19909328b54cd4cfedc10cbc50054a9a.ctex"
+uid="uid://d1xm58gqiygom"
+path="res://.godot/imported/cursor.png-383f12642e15e3992e8abb847be42b80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tilemap.png"
-dest_files=["res://.godot/imported/Tilemap.png-19909328b54cd4cfedc10cbc50054a9a.ctex"]
+source_file="res://trpg/assets/cursor.png"
+dest_files=["res://.godot/imported/cursor.png-383f12642e15e3992e8abb847be42b80.ctex"]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

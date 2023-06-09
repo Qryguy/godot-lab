@@ -1,0 +1,47 @@
+[gd_scene load_steps=9 format=3 uid="uid://blea56axovon7"]
+
+[ext_resource type="PackedScene" uid="uid://b2qfw20ov3wot" path="res://platform/actors/platformplayer.tscn" id="1_2apwv"]
+[ext_resource type="PackedScene" uid="uid://chcsi1lppgvai" path="res://platform/actors/collectibles/collectible.tscn" id="2_3ibjj"]
+[ext_resource type="PackedScene" uid="uid://c0rvnu3t20603" path="res://platform/actors/collectibles/exit.tscn" id="3_frr76"]
+[ext_resource type="PackedScene" uid="uid://bd4fmlh44gvkk" path="res://trpg/scenes/menu.tscn" id="4_bw83a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qkrtt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exwlg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h3j4s"]
+size = Vector2(2.32224, 124.375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejbom"]
+size = Vector2(2.32224, 124.375)
+
+[node name="level" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_2apwv")]
+position = Vector2(81, 267)
+
+[node name="map" type="StaticBody2D" parent="."]
+scale = Vector2(26.44, 2.24)
+
+[node name="floor0" type="CollisionShape2D" parent="map"]
+position = Vector2(10.0605, 134.821)
+shape = SubResource("RectangleShape2D_qkrtt")
+
+[node name="floor1" type="CollisionShape2D" parent="map"]
+position = Vector2(32.4508, 103.571)
+shape = SubResource("RectangleShape2D_exwlg")
+
+[node name="wall0" type="CollisionShape2D" parent="map"]
+position = Vector2(1.22163, 62.6339)
+shape = SubResource("RectangleShape2D_h3j4s")
+
+[node name="wall1" type="CollisionShape2D" parent="map"]
+position = Vector2(21.2935, 156.25)
+shape = SubResource("RectangleShape2D_ejbom")
+
+[node name="Collectible" parent="." instance=ExtResource("2_3ibjj")]
+position = Vector2(334, 261)
+
+[node name="Exit" parent="." instance=ExtResource("3_frr76")]
+position = Vector2(567, 190)
+nlevel = ExtResource("4_bw83a")

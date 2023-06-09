@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuc3qhxj6vtno"]
+
+[ext_resource type="Script" path="res://trpg/scripts/cursor.gd" id="1_ayals"]
+[ext_resource type="Texture2D" uid="uid://d1xm58gqiygom" path="res://trpg/assets/cursor.png" id="2_wdn6y"]
+
+[node name="Cursor" type="Node2D"]
+rotation = 3.77972
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_ayals")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_wdn6y")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
